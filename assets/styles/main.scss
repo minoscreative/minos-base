@@ -1,0 +1,44 @@
+/* -------- Resets ---------- */
+* {
+   box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+}
+
+*:focus {
+   outline: none;
+}
+
+div, header, nav, section, footer {
+   display: block;
+}
+
+strong {
+
+}
+
+
+.page-enter-active, .page-leave-active {
+   transition: all .30s ease-out;
+}
+.page-enter, .page-leave-active {
+   opacity: 0;
+   transform-origin: 50% 50%;
+}
+
+
+/* -------- General ---------- */
+html {
+   background: #ffffff;
+   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+html, body {
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+#app {
+   margin: 0 0 0 0;
+   padding: 0 0 0 0;
+}
