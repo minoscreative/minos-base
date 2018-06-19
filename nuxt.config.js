@@ -37,7 +37,13 @@ module.exports = {
          { rel: 'icon', type: 'image/png', sizes: '192x192', href: '/favicon/192x192.png' }*/
       ]
    },
-
+   env: {
+      websiteUrl: 'https://www.WEBSITEURL.co.uk'
+   },
+   sitemap: {
+      hostname: 'https://www.WEBSITEURL.co.uk',
+      generate: true
+   },
    /* Customize the progress-bar color */
    loading: { color: '#FFFFFF' },
 
@@ -107,9 +113,5 @@ module.exports = {
       scrollBehaviour: function (to, from, savedPosition) {
          return { x: 0, y: 0 }
       }
-   },
-   sitemap: {
-      hostname: 'https://www.WEBSITEURL.co.uk',
-      generate: true
    }
 }

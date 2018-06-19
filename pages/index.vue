@@ -24,7 +24,7 @@
                { hid: 'og:title', name: 'og:title', content: this.metaData.title },
                { hid: 'og:description', name: 'og:description', content: this.metaData.desc },
                { hid: 'og:url', name: 'og:url', content: this.metaData.url },
-               { hid: 'og:image', name: 'og:image', content: this.metaData.baseurl + socialImage }
+               { hid: 'og:image', name: 'og:image', content: process.env.websiteUrl + socialImage }
             ],
             link: [
                { rel: 'canonical', href: this.metaData.url }
@@ -36,8 +36,7 @@
             metaData: {
                title: 'Mobile Toilet Hire in Hertfordshire - Dane End',
                desc: 'Dane End Mobile Toilet Hire provide luxury mobile toilets that are perfect for a wide range of events.',
-               url: 'https://www.WEBSITEURL.co.uk/page-url',
-               baseurl: 'https://www.WEBSITEURL.co.uk'
+               url: process.env.websiteUrl + '/page-url'
             }
          }
       }
