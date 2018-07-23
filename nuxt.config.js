@@ -20,7 +20,7 @@ module.exports = {
          { hid: 'format-detection', name: 'format-detection', content: 'telephone=no' }
       ],
       link: [
-         /*{ href: 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700', rel: 'stylesheet' },
+         /*{ href: 'https://fonts.googleapis.com/css?family=Hind:400,600|Montserrat:600,700,800,900', rel: 'stylesheet' },
          { rel: 'apple-touch-icon', sizes: '57x57', href: '/favicon/57x57.png' },
          { rel: 'apple-touch-icon', sizes: '60x60', href: '/favicon/60x60.png' },
          { rel: 'apple-touch-icon', sizes: '72x72', href: '/favicon/72x72.png' },
@@ -45,7 +45,7 @@ module.exports = {
       generate: true
    },
    /* Customize the progress-bar color */
-   loading: { color: '#FFFFFF' },
+   loading: { color: '#FFFFFF', height: '5px' },
 
    /* Global CSS */
    css: [

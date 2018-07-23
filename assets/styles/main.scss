@@ -1,3 +1,11 @@
+$heading-font: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+$content-font: 'Hind', 'Helvetica Neue', Arial, sans-serif;
+
+$heading-weight: 700;
+$content-weight: 400;
+$content-bold: 600;
+
+
 /* -------- Resets ---------- */
 * {
    box-sizing: border-box;
@@ -14,7 +22,7 @@ div, header, nav, section, footer {
 }
 
 strong {
-
+    font-weight: $content-bold;
 }
 
 
@@ -30,15 +38,197 @@ strong {
 /* -------- General ---------- */
 html {
    background: #ffffff;
-   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 html, body {
    margin: 0 0 0 0;
    padding: 0 0 0 0;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+
+   font-family: $content-font;
+   font-weight: $content-weight;
+   font-size: 18px;
+   line-height: 2;
 }
 #app {
    margin: 0 0 0 0;
    padding: 0 0 0 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    
+    padding: 0px 32px;
+}
+.grid-container {
+    width: 80%;
+    margin: 0 auto;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 36px;
+    padding: 0px 32px;
+}
+
+h1 {
+    font-family: $heading-font;
+    font-weight: $heading-weight;
+
+    font-size: 2.7vw;
+    letter-spacing: -0.05vw;
+    line-height: 1.2;
+}
+h2 {
+    font-family: $heading-font;
+    font-weight: $heading-weight;
+
+    font-size: 2vw;
+    letter-spacing: -0.07vw;
+    line-height: 1.2;
+}
+h3 {
+    font-family: $heading-font;
+    font-weight: $heading-weight;
+
+    font-size: 1.2vw;
+    letter-spacing: -0.01vw;
+    line-height: 1.2;
+}
+p {
+    -webkit-margin-before: 2em;
+    -webkit-margin-after: 2em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+
+/* -------- Grid Defaults ---------- */
+.grid-start-1 {
+    grid-column-start: 1;
+}
+.grid-start-2 {
+    grid-column-start: 2;
+}
+.grid-start-3 {
+    grid-column-start: 3;
+}
+.grid-start-4 {
+    grid-column-start: 4;
+}
+.grid-start-5 {
+    grid-column-start: 5;
+}
+.grid-start-6 {
+    grid-column-start: 6;
+}
+.grid-start-7 {
+    grid-column-start: 7;
+}
+.grid-start-8 {
+    grid-column-start: 8;
+}
+.grid-start-9 {
+    grid-column-start: 9;
+}
+
+.grid-span-1 {
+    grid-column-end: span 1;
+}
+.grid-span-2 {
+    grid-column-end: span 2;
+}
+.grid-span-3 {
+    grid-column-end: span 3;
+}
+.grid-span-4 {
+    grid-column-end: span 4;
+}
+.grid-span-5 {
+    grid-column-end: span 5;
+}
+.grid-span-6 {
+    grid-column-end: span 6;
+}
+.grid-span-7 {
+    grid-column-end: span 7;
+}
+.grid-span-8 {
+    grid-column-end: span 8;
+}
+.grid-span-9 {
+    grid-column-end: span 9;
+}
+.grid-span-10 {
+    grid-column-end: span 10;
+}
+.grid-span-11 {
+    grid-column-end: span 11;
+}
+.grid-span-12 {
+    grid-column-end: span 12;
+}
+
+
+
+/* -------- Navigation ---------- */
+.mob-nav-btn {
+    padding: 10px;
+    transition: .25s ease-in-out;
+    transition-delay: .25s;
+    z-index: 22;
+
+    .mob-nav-icon {
+        width: 20px;
+        height: 10px;
+        position: relative;
+    }
+    .mob-nav-inner {
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(.55,.055,.675,.19);
+        transition-duration: .22s;
+        top: 50%;
+        margin-top: -2px;
+
+        &:before, &:after {
+            background: #17171f;
+            position: absolute;
+            display: block;
+            content: ' ';
+            width: 20px;
+            height: 2px;
+            transition-timing-function: ease;
+            transition-duration: .15s;
+            transition-property: transform;
+        }
+
+        &:before {
+            transition: top .1s ease-in .25s,opacity .1s ease-in;
+            top: -4px;
+        }
+        &:after {
+            transition: bottom .1s ease-in .25s,transform .22s cubic-bezier(.55,.055,.675,.19);
+            bottom: -4px;
+        }
+    }
+    &.open-nav {
+        .mob-nav-inner {
+            transition-delay: .12s;
+            transition-timing-function: cubic-bezier(.215,.61,.355,1);
+            transform: rotate(225deg);
+
+            &:before {
+                top: 0;
+                transition: top .1s ease-out,opacity .1s ease-out .12s;
+            }
+            &:after {
+                bottom: 0;
+                transition: bottom .1s ease-out,transform .22s cubic-bezier(.215,.61,.355,1) .12s;
+                transform: rotate(-90deg);
+            }
+        }
+    }
 }

@@ -34,8 +34,8 @@
       data() {
          return {
             metaData: {
-               title: 'Mobile Toilet Hire in Hertfordshire - Dane End',
-               desc: 'Dane End Mobile Toilet Hire provide luxury mobile toilets that are perfect for a wide range of events.',
+               title: 'WEBSITE TITLE - Minos Creative',
+               desc: '',
                url: process.env.websiteUrl + '/page-url'
             }
          }
@@ -46,7 +46,6 @@
 <style>
 .container
 {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

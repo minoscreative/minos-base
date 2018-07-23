@@ -12,14 +12,19 @@
 
 
 <script>
-   import Navigation from '~/components/layout/navigation'
-   import Footer from '~/components/layout/footer'
-   
-   export default {
-      components: {
-         'app-nav': Navigation,
-         'app-footer': Footer
-      }
-   }
+    import Navigation from '~/components/layout/navigation'
+    import Footer from '~/components/layout/footer'
+    
+    export default {
+        head: {
+            bodyAttrs: {
+                ontouchstart: ''
+            }
+        },
+        components: {
+            'app-nav': Navigation,
+            'app-footer': Footer
+        }
+    }
    
 </script>
